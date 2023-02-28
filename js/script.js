@@ -96,35 +96,11 @@ resultEl.style.display = "block"
 let userChoose = Math.floor( (Math.random() * 6 ) + 1);
 let computerChoose = Math.floor( (Math.random() * 6 ) + 1);
 
-//scelta dell'utente
-if(userChoose == 1){
-    userDiceImageEl.src = diceImage[0];
-} else if (userChoose == 2){
-    userDiceImageEl.src = diceImage[1];
-} else if (userChoose == 3) {
-    userDiceImageEl.src = diceImage[2];
-} else if (userChoose == 4) {
-    userDiceImageEl.src = diceImage[3];
-} else if (userChoose == 5) {
-    userDiceImageEl.src = diceImage[4];
-} else if (userChoose == 6) {
-    userDiceImageEl.src = diceImage[5];
-}
+// //scelta dell'utente 
+userDiceImageEl.src = diceImage[userChoose - 1];
+// //scelta del Computer
+computerDiceImageEl.src = diceImage[computerChoose - 1];
 
-//scelta del Computer 
-if(computerChoose == 1){
-    computerDiceImageEl.src = diceImage[0];
-} else if (computerChoose == 2){
-    computerDiceImageEl.src = diceImage[1];
-} else if (computerChoose == 3) {
-    computerDiceImageEl.src = diceImage[2];
-} else if (computerChoose == 4) {
-    computerDiceImageEl.src = diceImage[3];
-} else if (computerChoose == 5) {
-    computerDiceImageEl.src = diceImage[4];
-} else if (computerChoose == 6) {
-    computerDiceImageEl.src = diceImage[5];
-}
 
 if(userChoose > computerChoose){
     resultEl.innerText = ("HAI VINTO!!");
